@@ -7,7 +7,7 @@ layout: default
   <h1 class="page-heading">Useful Links</h1>
 
   <ul class="post-list">
-    {% for link in site.data.contentful.spaces.links %}
+    {% for link in site.data.contentful.spaces.links.link %}
       <li>
         <h2><a href="{{ link.url | url }}">{{ link.websiteName }}</a></h2>
       </li>
