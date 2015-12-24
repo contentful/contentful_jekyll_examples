@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Contentful Jekyll Single Space Example
+title: Contentful Jekyll Multiple Space Example
 email: david.litvak@contentful.com
 description: > # this means to ignore newlines until "baseurl:"
-  Single Space Example using Jekyll and Contentful
+  Multiple Space Example using Jekyll and Contentful
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: contentfulapp
@@ -26,3 +26,5 @@ contentful:
     - catalogue:
         space: <INSERT_SPACE_ID_CREATED_BY_BOOTSTRAP_HERE>
         access_token: <INSERT_ACCESS_TOKEN_CREATED_BY_BOOTSTRAP_HERE>
+        cda_query:
+          include: 2

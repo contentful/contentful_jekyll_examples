@@ -28,6 +28,8 @@ SPACE_ID = <YOUR_SPACE_ID_WILL_BE_HERE>
 - catalogue:
     space: <INSERT_SPACE_ID_CREATED_BY_BOOTSTRAP_HERE>
     access_token: <INSERT_ACCESS_TOKEN_CREATED_BY_BOOTSTRAP_HERE>
+    cda_query:
+      include: 2
 ```
 
 * Paste the following command inside your terminal:
@@ -43,11 +45,18 @@ Then open your browser and go to: [localhost:4000](http://localhost:4000)
 
 For reference of basic configuration, you can look into [single_content_type example](../single_content_type/README.md)
 
-In this case we're using 
+In this case we're using a extra configuration option not described in the previous example:
+
+```yml
+  cda_query:
+    include: 2
+```
+
+This option customizes the query made to the Contentful API, see [contentful.rb](https://github.com/contentful/contentful.rb) for more info (look for filter options there). Note that by default only 100 entries will be fetched, this can be configured to up to 1000 entries using the `limit` option.
 
 In this example we'll be using [Contentful Bootstrap](https://github.com/contentful-labs/contentful-bootstrap.rb) for setting up our own Space with multiple Content Types, and fetching
 the configuration from `~/.contentfulrc`
 
-The template used is located [here](./bootstrap_templates/catalogue.json)
+The template used is located [here](./example/bootstrap_templates/catalogue.json)
 
 In this example we have two `contentful` extension activations.

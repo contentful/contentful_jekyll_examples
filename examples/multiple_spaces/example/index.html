@@ -4,13 +4,97 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Useful Links</h1>
+  <h1 class="page-heading">Multiple Spaces Example</h1>
 
+  <h2>Useful Links</h2>
   <ul class="post-list">
-    {% for link in site.data.contentful.spaces.links %}
+    {% for link in site.data.contentful.spaces.links.link %}
       <li>
-        <h2><a href="{{ link.url | url }}">{{ link.websiteName }}</a></h2>
+        <h4><a href="{{ link.url | url }}">{{ link.websiteName }}</a></h4>
       </li>
     {% endfor %}
   </ul>
+
+  <h2>Catalogue</h2>
+  <h3>Products</h3>
+  {% for product in site.data.contentful.spaces.catalogue.product %}
+    <div class="row col-md-12">
+      <div class="col-md-2">
+        <img src="{{ product.image[0].url | url }}?w=140" alt="{{ product.image[0].title }}" />
+      </div>
+      <div class="col-md-6">
+        <h4>{{ product.productName }} 
+          {% if product.brand %}
+            <small>by <a href="{{ product.brand.website | url }}">{{ product.brand.companyName }}</a></small>
+          {% endif %}
+        </h4>
+        <h6>{{ product.categories | map: 'to_liquid' | map: 'title' | array_to_sequence_string }}</h6>
+        <p class="small">{{ product.productDescription | slice: 0, 100 }}...</p>
+        <a href="{{ product.website | url }}">Buy Now!</a>
+        <h6>Tags: <small>{{ product.tags | join: ", " }}</small></h6>
+      </div>
+    {% if product.image.size > 1 %}
+      <div class="col-md-4">
+        <h6>Other Images</h6>
+        <div class="row">
+          {% for image in product.image | slice: 1, product.image.size %}
+            <div class="col-md-1">
+              <img src="{{ image.url | url }} }}?w=40" alt="{{ image.title }}" />
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    </div>
+  {% endfor %}
+
+  <div class='clearfix'></div>
+
+  <br />
+  <br />
+
+  <hr>
+
+  <h3>Brands</h3>
+  {% for brand in site.data.contentful.spaces.catalogue.brand %}
+    <div class="row col-md-10">
+      <div class="col-md-3">
+        <img src="{{ brand.logo.url | url }}?w=140" alt="{{ brand.logo.title }}" />
+      </div>
+      <div class="col-md-8">
+        <h4>{{ brand.companyName }}</h4>
+        <p>{{ brand.companyDescription | slice: 0, 100 }}...</p>
+        <h6>
+          {% if brand.phone %}
+            Phone No: {{ brand.phone | join: ", " }} &nbsp; | &nbsp;
+          {% endif %}
+          <a href="{{ brand.website | url }}">Go to website</a> &nbsp; | &nbsp;
+          <a href="mailto:{{ brand.email }}">Email</a>
+        </h6>
+      </div>
+    </div>
+    <br>
+  {% endfor %}
+
+  <div class='clearfix'></div>
+
+  <br />
+  <br />
+
+
+  <hr>
+
+  <h3>Categories</h3>
+  {% for category in site.data.contentful.spaces.catalogue.category %}
+    <div class="row col-md-10">
+      <div class="col-md-3">
+        <img src="{{ category.icon.url | url }}?w=140" alt="{{ category.icon.title }}" />
+      </div>
+      <div class="col-md-8">
+        <h4>{{ category.title  }}</h4>
+        <p>{{ category.categoryDescription }}</p>
+      </div>
+    </div>
+    <br>
+  {% endfor %}
 </div>
