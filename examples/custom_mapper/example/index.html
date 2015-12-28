@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Useful Links</h1>
+
+  <ul class="post-list">
+    {% for link in site.data.contentful.spaces.links.link %}
+      <li>
+        <p> Link: </p>
+        <ul>
+          <li> Regular: <h2><a href="{{ link.url | url }}">{{ link.websiteName }}</a></h2></li>
+          <li> Reversed: <h2><a href="{{ link.lru | url }}">{{ link.emaNetisbew }}</a></h2></li>
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
