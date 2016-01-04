@@ -5,7 +5,7 @@
 * Paste the following command inside your terminal:
 
 ```bash
-echo "Checkout Repository"         && git clone git@github.com:contentful-labs/contentful_middleman_examples.git && \
+echo "Checkout Repository"         && git clone git@github.com:contentful/contentful_jekyll_examples.git && \
 echo "Go to This Example's Folder" && cd contentful_middleman_examples/examples/custom_mapper && \
 echo "Install Dependencies"        && bundle install && \
 echo "Fetch Contentful Data"       && bundle exec rake contentful && \

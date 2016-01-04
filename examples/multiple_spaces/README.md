@@ -5,7 +5,7 @@
 * Paste the following command inside your terminal:
 
 ```bash
-echo "Checkout Repository"         && git clone git@github.com:contentful-labs/contentful_middleman_examples.git && \
+echo "Checkout Repository"         && git clone git@github.com:contentful/contentful_jekyll_examples.git && \
 echo "Go to This Example's Folder" && cd contentful_middleman_examples/examples/multiple_spaces && \
 echo "Install Dependencies"        && bundle install && \
 echo "Create Catalogue Space"      && contentful_bootstrap create_space my_catalogue --json-template bootstrap_templates/catalogue.json
@@ -54,7 +54,7 @@ In this case we're using a extra configuration option not described in the previ
 
 This option customizes the query made to the Contentful API, see [contentful.rb](https://github.com/contentful/contentful.rb) for more info (look for filter options there). Note that by default only 100 entries will be fetched, this can be configured to up to 1000 entries using the `limit` option.
 
-In this example we'll be using [Contentful Bootstrap](https://github.com/contentful-labs/contentful-bootstrap.rb) for setting up our own Space with multiple Content Types, and fetching
+In this example we'll be using [Contentful Bootstrap](https://github.com/contentful/contentful-bootstrap.rb) for setting up our own Space with multiple Content Types, and fetching
 the configuration from `~/.contentfulrc`
 
 The template used is located [here](./example/bootstrap_templates/catalogue.json)
