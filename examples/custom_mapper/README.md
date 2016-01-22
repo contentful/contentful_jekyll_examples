@@ -6,7 +6,7 @@
 
 ```bash
 echo "Checkout Repository"         && git clone git@github.com:contentful/contentful_jekyll_examples.git && \
-echo "Go to This Example's Folder" && cd contentful_middleman_examples/examples/custom_mapper && \
+echo "Go to This Example's Folder" && cd contentful_jekyll_examples/examples/custom_mapper/example && \
 echo "Install Dependencies"        && bundle install && \
 echo "Fetch Contentful Data"       && bundle exec rake contentful && \
 echo "Start Jekyll Server"         && jekyll server

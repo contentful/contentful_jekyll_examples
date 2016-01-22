@@ -6,7 +6,7 @@
 
 ```bash
 echo "Checkout Repository"         && git clone git@github.com:contentful/contentful_jekyll_examples.git && \
-echo "Go to This Example's Folder" && cd contentful_middleman_examples/examples/multiple_spaces && \
+echo "Go to This Example's Folder" && cd contentful_jekyll_examples/examples/multiple_spaces/example && \
 echo "Install Dependencies"        && bundle install && \
 echo "Create Catalogue Space"      && contentful_bootstrap create_space my_catalogue --json-template bootstrap_templates/catalogue.json
 ```
