@@ -9,7 +9,7 @@ echo "Checkout Repository"         && git clone git@github.com:contentful/conten
 echo "Go to This Example's Folder" && cd contentful_jekyll_examples/examples/custom_mapper/example && \
 echo "Install Dependencies"        && bundle install && \
 echo "Fetch Contentful Data"       && bundle exec rake contentful && \
-echo "Start Jekyll Server"         && jekyll server
+echo "Start Jekyll Server"         && bundle exec jekyll server
 ```
 
 Then open your browser and go to: [localhost:4000](http://localhost:4000)

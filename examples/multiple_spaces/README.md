@@ -35,8 +35,8 @@ SPACE_ID = <YOUR_SPACE_ID_WILL_BE_HERE>
 * Paste the following command inside your terminal:
 
 ```bash
-echo "Fetch Contentful Data" && jekyll contentful && \
-echo "Start Jekyll Server"   && jekyll server
+echo "Fetch Contentful Data" && bundle exec jekyll contentful && \
+echo "Start Jekyll Server"   && bundle exec jekyll server
 ```
 
 Then open your browser and go to: [localhost:4000](http://localhost:4000)

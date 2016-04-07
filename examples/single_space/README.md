@@ -8,8 +8,8 @@ Paste the following command inside your terminal:
 echo "Checkout Repository"         && git clone git@github.com:contentful/contentful_jekyll_examples.git && \
 echo "Go to This Example's Folder" && cd contentful_jekyll_examples/examples/single_space/example && \
 echo "Install Dependencies"        && bundle install && \
-echo "Fetch Contentful Data"       && jekyll contentful && \
-echo "Start Jekyll Server"         && jekyll server
+echo "Fetch Contentful Data"       && bundle exec jekyll contentful && \
+echo "Start Jekyll Server"         && bundle exec jekyll server
 ```
 
 Then open your browser and go to: [localhost:4000](http://localhost:4000)
