@@ -36,7 +36,7 @@ In [`_config.yml`](./example/_config.yml) you will find the above cited configur
 
 ```django
   <ul class="post-list">
-    {% for link in site.data.contentful.spaces.links %}
+    {% for link in site.data.contentful.spaces.links.link %}
       <li>
         <h2><a href="{{ link.url | url }}">{{ link.websiteName }}</a></h2>
       </li>
