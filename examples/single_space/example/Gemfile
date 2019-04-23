@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'jekyll', '~> 3.0'
+gem 'jekyll', '~> 3.6', '>= 3.6.3'
 
 gem 'contentful_bootstrap'
 
