@@ -4,6 +4,10 @@ gem 'jekyll', '~> 3.6', '>= 3.6.3'
 
 gem 'contentful_bootstrap'
 
+gem 'kramdown-parser-gfm'
+
+gem 'webrick'
+
 group :jekyll_plugins do
   gem 'jekyll-contentful-data-import'
 end
